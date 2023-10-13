@@ -1,0 +1,19 @@
+{
+    "html-slider-response": [
+        "rt",
+		"time_elapsed",
+		"internal_node_id",
+		"condition",
+		"recorded_at",
+		"source_code_version",
+		"ip",
+		"user_agent",
+		"device",
+		"browser",
+		"browser_version",
+        "platform",
+        "platform_version",
+		"view_history",
+        "slider_start"
+    ]
+}
