@@ -18,13 +18,13 @@ trim_plugin_column <- function(df, plugin_name="html-slider-response", columns=c
   return (df)
 }
 
-filter_by_first_lang <- function(df, lang="en") {
+filter_by_first_lang <- function(df, lang="English") {
   # Remove any leading or trailing white space around first_lang column
   # Convert value to title
   df$first_lang <- str_to_title(trimws(df$first_lang), locale="en")
 
   df %>% distinct(first_lang) # show which distinct languages are there
-  df <- filter(df, df$first_lang == "English")	#filter by English first language
+  df <- filter(df, df$first_lang == lang)	#filter by English first language
 
   return (df)
 }
