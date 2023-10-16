@@ -29,6 +29,8 @@ filter_by_first_lang(df, lang = "English")
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
+library(plyr)
+library(dplyr)
 library(stringr)
 
 ## Orginal Data Frame
