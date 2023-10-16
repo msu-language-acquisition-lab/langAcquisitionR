@@ -8,8 +8,8 @@ plugins <- fromJSON("plugins.json")
 trim_plugin_column <- function(df, plugin_name="html-slider-response", columns=c()) {
   excludes <- plugins[[plugin_name]]	# Columns added by the plugin
 
-  df <- df %>% select(-c(excludes))	# Exclude above columns from data frame
-  df <- df %>% select(-c(columns))	# Exclude any additional columns from data
+  df <- df %>% select(-c(any_of(excludes)))	# Exclude above columns from data frame
+  df <- df %>% select(-c(any_of(columns)))	# Exclude any additional columns from data
 
   # Get trial data
   df <- filter(df,
